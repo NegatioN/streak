@@ -8,7 +8,7 @@
  */
 import gapiFiles from '../gapi/files.js';
 
-const ROOT_FOLDER_NAME = 'Streaks';
+const ROOT_FOLDER_NAME = 'WorkoutLogger';
 const ROOT_FOLDER_MARKER = 'isAnvakaStreakFolderRoot';
 
 // Stores identifier of a folder that hosts all streak projects
@@ -81,10 +81,9 @@ function processRootFolder(result) {
 export function makeNewStreakFolder() {
   if (isCreateStreakFolderInProgress) throw new Error('You are getting into race conditions');
   isCreateStreakFolderInProgress = true;
-
   const fileMetadata = {
     name: ROOT_FOLDER_NAME,
-    description: 'This folder contains all your "streak" projects',
+    description: 'This folder contains all your workout logs',
     mimeType: 'application/vnd.google-apps.folder',
     properties: {
       [ROOT_FOLDER_MARKER]: 'true'
