@@ -16,11 +16,11 @@ echo "Starting local instance of datastore..."
 DATA_PORT=$[${RANDOM}%200+11000]
 REST_PORT=$[${RANDOM}%200+12000]
 
-export DATASTORE_DATASET=streak-146302
+export DATASTORE_DATASET="Nothing"
 export DATASTORE_EMULATOR_HOST=localhost:$DATA_PORT
 export DATASTORE_EMULATOR_HOST_PATH=localhost:$DATA_PORT/datastore
 export DATASTORE_HOST=http://localhost:$DATA_PORT
-export DATASTORE_PROJECT_ID=streak-146302
+export DATASTORE_PROJECT_ID="nothing"
 
 gcloud beta emulators datastore start --consistency=1.0 --project=streak-146302 --data-dir="$DATA_DIR/data" --host-port=localhost:$DATA_PORT > $DATA_DIR/gcloud_log.txt &
 

@@ -1,6 +1,6 @@
 const Datastore = require('@google-cloud/datastore');
 
-const projectId = process.env.DATASTORE_PROJECT_ID || 'streak-146302';
+const projectId = process.env.DATASTORE_PROJECT_ID || 'nothing';
 const datastore = Datastore({ projectId });
 
 console.log('Data store initialized. Project id: ', projectId);

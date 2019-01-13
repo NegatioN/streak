@@ -43,23 +43,26 @@ export default {
     }
   },
   created() {
-    this.updateUsers();
+    // this.updateUsers();
     setPageTitle('Explore Streak');
   },
   watch: {
     $route(/* to */) {
-      this.updateUsers();
+      // this.updateUsers();
     },
   },
   methods: {
+  /*
     updateUsers() {
       this.isLoading = true;
+
       listAllUsers(this.$route.query).then(response => {
         this.isLoading = false;
         this.users = response.users;
         this.nextCursor = response.users.length > 0 ? response.pageCursor : null;
       });
     }
+    */
   }
 };
 </script>
